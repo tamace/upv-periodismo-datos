@@ -10,3 +10,20 @@ En cuanto a la praxis se ha desarrollado los antecedentes del periodismo de prec
 Existen tres tipos de datos: CSV, JSON y XML
 ##### antecedentes periodismo datos
 Philip Meyer, Adrian Holovaty, Aron Pilhofer, Simon Roger
+```
+# /etc/nsswitch.conf
+#
+#    This file is read once by the first process in a Cygwin process tree.
+#    To pick up changes, restart all Cygwin processes.  For a description
+#    see https://cygwin.com/cygwin-ug-net/ntsec.html#ntsec-mapping-nsswitch
+#
+# Defaults:
+# passwd:   files db
+# group:    files db
+# db_enum:  cache builtin
+# db_home:  /home/%U
+# db_shell: /bin/bash
+# db_gecos: <empty>
+db_home:  /%H
+# la última instrucción es para personalizar la varible de entorno la home de cygwin para que sea la misma del usuario de Windows
+```
